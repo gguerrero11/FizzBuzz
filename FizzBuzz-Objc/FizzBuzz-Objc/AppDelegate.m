@@ -12,11 +12,12 @@
 
 
 
+int bNum = 73;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-      return YES;
+    [self isBuzzed:bNum];
+    return YES;
 }
 
-int bNum = 73;
 // Add a method called isBuzzed that takes an integer and returns a bool
 - (BOOL)isBuzzed:(int)bNum {
     // This converts intNum into a string for later detection of the character '3'
