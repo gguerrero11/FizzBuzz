@@ -12,9 +12,9 @@
 
 
 
-int bNum = 44; //TEMP
+int bNum = 152; //TEMP
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self isBuzzed:bNum]; //TEMP
+    [self isFizzed:bNum]; //TEMP
     return YES;
 }
 
@@ -24,18 +24,15 @@ int bNum = 44; //TEMP
     NSString *bIntString = [NSString stringWithFormat:@"%i", bNum];
         // Method checks if the integer is a multiple of 3
         if (bNum % 3 == 0) {
-        NSLog(@"Multiple of Three!"); // TEMP
         // if the number is a multiple of 3, return true
         return true;
         // if the number is not a multiple of 3, the method should check to see if the number contains the character 3
     } else
         if ([bIntString rangeOfString:@"3"].location != NSNotFound) {
         // if the number contains the character three it should return true
-        NSLog(@"Found Three!");
         return true;
     // otherwise it should return false
     } else
-          NSLog(@"None of the above"); // TEMP
         return false;
   
 }
@@ -45,13 +42,16 @@ int bNum = 44; //TEMP
     NSString *fIntString = [NSString stringWithFormat:@"%i", fNum];
         // Method checks if fNum is a multiple of 5 & returns true
         if (fNum % 5 == 0){
+            NSLog(@"Multiple of 5!"); //TEMP
         return true;
     }else
         // Checks if fNum (turned into a string) contains character '5'
         if ([fIntString rangeOfString:@"5"].location !=NSNotFound) {
+            NSLog(@"Contains the 5!"); //TEMP
         return true;
     }else
         // Otherwise return false
+            NSLog(@"None whatsoever"); //TEMP
         return false;
     
     return true;
