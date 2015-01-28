@@ -12,4 +12,10 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+// Step 2: Create a buzz check method
+- (BOOL)isBuzzed:(int)num;
+    
+
+
+
 @end
