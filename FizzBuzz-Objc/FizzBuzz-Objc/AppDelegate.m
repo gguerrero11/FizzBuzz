@@ -12,9 +12,9 @@
 
 
 
-int bNum = 73;
+int bNum = 44; //TEMP
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self isBuzzed:bNum];
+    [self isBuzzed:bNum]; //TEMP
     return YES;
 }
 
@@ -24,9 +24,9 @@ int bNum = 73;
     NSString *bIntString = [NSString stringWithFormat:@"%i", bNum];
         // Method checks if the integer is a multiple of 3
         if (bNum % 3 == 0) {
+        NSLog(@"Multiple of Three!"); // TEMP
         // if the number is a multiple of 3, return true
         return true;
-        NSLog(@"Multiple of Three!");
         // if the number is not a multiple of 3, the method should check to see if the number contains the character 3
     } else
         if ([bIntString rangeOfString:@"3"].location != NSNotFound) {
@@ -35,8 +35,9 @@ int bNum = 73;
         return true;
     // otherwise it should return false
     } else
+          NSLog(@"None of the above"); // TEMP
         return false;
-    NSLog(@"None of the above");
+  
 }
 
 - (BOOL)isFizzed:(int)fNum{
