@@ -13,9 +13,10 @@
 @property (strong, nonatomic) UIWindow *window;
 
 // Step 2: Create a buzz check method
-- (BOOL)isBuzzed:(int)num;
+- (BOOL)isBuzzed:(int)bNum;
     
-
+// Step 3: Create a fizz check method
+- (BOOL)isFizzed:(int)fNum;
 
 
 @end
