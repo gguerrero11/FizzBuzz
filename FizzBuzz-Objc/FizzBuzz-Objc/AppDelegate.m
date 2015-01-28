@@ -12,9 +12,9 @@
 
 
 
-int bNum = 152; //TEMP
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self isFizzed:bNum]; //TEMP
+
     return YES;
 }
 
@@ -42,16 +42,13 @@ int bNum = 152; //TEMP
     NSString *fIntString = [NSString stringWithFormat:@"%i", fNum];
         // Method checks if fNum is a multiple of 5 & returns true
         if (fNum % 5 == 0){
-            NSLog(@"Multiple of 5!"); //TEMP
         return true;
     }else
         // Checks if fNum (turned into a string) contains character '5'
         if ([fIntString rangeOfString:@"5"].location !=NSNotFound) {
-            NSLog(@"Contains the 5!"); //TEMP
         return true;
     }else
         // Otherwise return false
-            NSLog(@"None whatsoever"); //TEMP
         return false;
     
     return true;
