@@ -14,7 +14,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+    // Step 4: Call FizzBuzz methods
+    for (int i = 0; i < 100; i++){
+        if ([isBuzzed:i] && [![isFizzed:i]) {NSLog(@"Buzz");} else
+    }
     return YES;
 }
 
