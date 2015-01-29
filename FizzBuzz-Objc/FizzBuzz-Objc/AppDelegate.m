@@ -11,17 +11,28 @@
 @implementation AppDelegate
 
 
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Step 4: Call FizzBuzz methods
     for (int i = 0; i < 100; i++){
-        if ([isBuzzed:i] && [![isFizzed:i]) {NSLog(@"Buzz");} else
+        // If the integer isBuzzed but not isFizzed print "Buzz"
+        if ([self isBuzzed:i] && ![self isFizzed:i]) {
+            NSLog(@"Buzz");} else
+        // If the integer isFizzed but not isBuzzed print "Fizz"
+        if ([self isFizzed:i] && ![self isBuzzed:i]) {
+            NSLog(@"Fizz");} else
+        // If the integer isFizzed and isBuzzed print "FizzBuzz"
+        if ([self isFizzed:i] &&  [self isBuzzed:i]) {
+            NSLog(@"FizzBuzz");} else
+        // If the integer is not isFizzed and is not isBuzzed print the number
+        if (![self isFizzed:i] &&  ![self isBuzzed:i]) {
+            NSLog(@"%d", i);}
+
     }
     return YES;
 }
 
 // Add a method called isBuzzed that takes an integer and returns a bool
+
 - (BOOL)isBuzzed:(int)bNum {
     // This converts intNum into a string for later detection of the character '3'
     NSString *bIntString = [NSString stringWithFormat:@"%i", bNum];
@@ -34,7 +45,7 @@
         if ([bIntString rangeOfString:@"3"].location != NSNotFound) {
         // if the number contains the character three it should return true
         return true;
-    // otherwise it should return false
+            // otherwise it should return false
     } else
         return false;
   
